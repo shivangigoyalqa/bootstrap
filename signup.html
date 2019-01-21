@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style1.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img src="/home/qainfotech/Desktop/img1.PNG" alt="title image" style="width:100%">
+    </br></br>
+    
+<center>
+	<img src="/home/qainfotech/Desktop/signup.png" alt="sign up" class="signup"><br>
+	
+	<div class="form1">
+		<form action="login.html" id="form" method="post" class="form3" style="margin-left:12%;margin-right:10%;border-radius: 8%;" onsubmit="return fun1()">
+		<label>First Name</label><br>
+<input type = "text" name = "name"required/><br>
+<label>Address</label><br>
+<input type = "textarea" rows="4" cols="500" name = "address"/><br>
+<label>Email-ID</label><br>
+<input type = "email" name = "email"  required/></br>
+<label>Password</label><br>
+<input type = "password" id = "pass" name = "password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required/></br>
+<label>Confirm Password</label><br>
+<input type = "password" name = "password" id = "cnfpass"  required/></br><br>
+<label>Gender</label><br>
+<input type="radio" name="gender" value="male" checked> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="other"> Other<br><br>
+<label >Date of Birth</label><br>
+<input type = "date" name = "date" /><br><br>
+<label>Mobile Number</label><br>
+<input type = "number" name = "mob" max="10"/> <br><br>
+<label>Languages Known</label><br>
+<input type="checkbox" name="hindi" value="hindi" size="30"> hindi
+<input type="checkbox" name="english" value="english" size="30"> english
+<input type="checkbox" name="french" value="french" checked> french<br> <br>
+<label>Country</label><br>
+<select>
+	<option value="IN">India</option>
+	<option value="AX">Åland Islands</option>
+	<option value="AL">Albania</option>
+	<option value="DZ">Algeria</option>
+	<option value="AS">Australia</option>
+	<option value="NE">Nepal</option>
+</select><br><br>
+<label>Select profile image</label><br>
+<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+<input type = "submit" value = "Sumbit details" class="btn btn-info" onclick="return Validate()" />
+
+</form>
+</div>
+ <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("pass").value;
+        var confirmPassword = document.getElementById("cnfpass").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
